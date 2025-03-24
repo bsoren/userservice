@@ -7,7 +7,9 @@ import lombok.Setter;
 @Setter
 @Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class UserDto {
-    Long id;
-    String email;
+public class SignUpRequestDto {
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
 }
