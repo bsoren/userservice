@@ -6,10 +6,7 @@ import com.bijay.userservice.dtos.UserDto;
 import com.bijay.userservice.models.User;
 import com.bijay.userservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class AuthController {
@@ -36,6 +33,11 @@ public class AuthController {
     @PostMapping("/logout/{email}")
     public String logout(@PathVariable String email) {
         return "logout";
+    }
+
+    @GetMapping("/login-test")
+    public String successLogin() {
+        return "successLogin";
     }
 
     public UserDto from(User user) {

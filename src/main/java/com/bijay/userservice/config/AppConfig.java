@@ -10,14 +10,14 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class AppConfig {
 
-    @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http
-                .csrf(AbstractHttpConfigurer::disable)
-                .cors(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
-                .build();
-    }
+//    @Bean
+//    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//        return http
+//                .csrf(AbstractHttpConfigurer::disable)
+//                .cors(AbstractHttpConfigurer::disable)
+//                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+//                .build();
+//    }
 
     @Bean
     BCryptPasswordEncoder bCryptPasswordEncoder() {
